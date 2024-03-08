@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaF - Podcast</title>
+
+  <!-- 
+    - favicon link
+  -->
+  <link rel="shortcut icon" href="arquivos/imagens/favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="arquivos/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+
+  <!-- HEADER -->
+
+  <header class="active" data-header>
+    <div class="container">
+
+      <!-- 
+        - overlay
+      -->
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="arquivos/imagens/logo.svg" alt="Micro logo">
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#podcast" class="navbar-link">Podcast</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contatos" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article class="container">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="hero">
+
+        <div class="hero-content">
+
+          <img src="arquivos/imagens/hero-title.png" alt="Podcast" class="hero-title">
+
+          <p class="hero-text">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt in felis malesuada mollis purus id sit in
+            aliquet
+            lectus eget morbi dui felis.
+          </p>
+
+          <div class="hero-btn-group">
+
+            <button class="btn btn-primary">
+              <ion-icon name="headset"></ion-icon>
+
+              <span>Listen Now</span>
+            </button>
+
+            <div class="btn-link-wrapper">
+
+              <p class="btn-title">Subscribe On:</p>
+
+              <a href="#" class="btn-link">
+                <ion-icon name="logo-apple"></ion-icon>
+
+                <span>Apple Music</span>
+              </a>
+
+              <a href="#" class="btn-link">
+                <ion-icon name="logo-soundcloud"></ion-icon>
+
+                <span>SoundCloud</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="hero-banner"></div>
+
+      </section>
+
+
+
+      <!-- 
+        - #PODCAST
+      -->
+
+      <section class="podcast" id="podcast">
+        <ul class="podcast-list">
+
+          <li>
+            <figure class="card-banner">
+              <img src="arquivos/imagens/tumbs/radios.jpg" alt="Ask Unladylike: Late Bloomer with Forever 35">
+
+              <div class="card-banner-icon">
+                <ion-icon name="play" class="playButton" id="playButton1"
+                  onclick="reproduzirPodcast('audioPlayer1', 'progressBar1', 'playButton1', 'pauseButton1')">
+                </ion-icon>
+
+                <ion-icon name="pause" class="pauseButton" id="pauseButton1"
+                  onclick="reproduzirPodcast('audioPlayer1', 'progressBar1', 'playButton1', 'pauseButton1')">
+                </ion-icon>
+              </div>
+              <progress class="progressBar" id="progressBar1" value="0" max="100"></progress>
+            </figure>
+
+
+            <audio id="audioPlayer1" controls style="display: none;">
+              <source src="arquivos/audiosPodcast/gu10245.mp3" type="audio/mpeg">
+              Seu navegador não suporta a tag de áudio.
+            </audio>
+
+            <div class="card-content">
+              <div class="card-meta">
+                <time datetime="2022-02-15">1 de março, 2024</time>
+
+                <p class="pod-epi">Music: 04</p>
+
+              </div>
+
+              <h3 class="h3 card-title">Jazz de Luxe: Band Earl Fuller's Famous Jazz</h3> <br>
+              <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, delectus dolores.
+                Consequatur provident eaque totam exercitationem nemo nesciunt, soluta quae possimus, obcaecati libero,
+                numquam fuga odio voluptates aliquam rem maxime?</p>
+            </div>
+          </li>
+
+          <li>
+
+            <figure class="card-banner">
+              <img src="arquivos/imagens/tumbs/festa.jpg" alt="Ask Unladylike: Late Bloomer with Forever 35">
+              <progress class="progressBar" id="progressBar2" value="0" max="100"></progress>
+
+              <div class="card-banner-icon">
+                <ion-icon name="play" class="playButton" id="playButton2"
+                  onclick="reproduzirPodcast('audioPlayer2', 'progressBar2', 'playButton2', 'pauseButton2')"></ion-icon>
+                <ion-icon name="pause" class="pauseButton" id="pauseButton2"
+                  onclick="reproduzirPodcast('audioPlayer2', 'progressBar2', 'playButton2', 'pauseButton2')"></ion-icon>
+              </div>
+            </figure>
+
+            <audio id="audioPlayer2" controls style="display: none;">
+              <source src="arquivos/audiosPodcast/JimitBaila.mp3" type="audio/mpeg">
+              Seu navegador não suporta a tag de áudio.
+            </audio>
+
+            <div class="card-content">
+              <div class="card-meta">
+                <time datetime="2022-02-15">Feb 8, 2022</time>
+
+                <p class="pod-epi">Episode: 03</p>
+              </div>
+
+              <h3 class="h3 card-title">How to Effectively Incentivize Team Members</h3><br>
+              <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, delectus dolores.
+                Consequatur provident eaque totam exercitationem nemo nesciunt, soluta quae possimus, obcaecati libero,
+                numquam fuga odio voluptates aliquam rem maxime?</p>
+            </div>
+
+
+          </li>
+
+          <li>
+
+            <figure class="card-banner">
+              <img src="arquivos/imagens/tumbs/reflexao.jpg" alt="Ask Unladylike: Late Bloomer with Forever 35">
+              <progress class="progressBar" id="progressBar3" value="0" max="100"></progress>
+
+              <div class="card-banner-icon">
+                <ion-icon name="play" class="playButton" id="playButton3"
+                  onclick="reproduzirPodcast('audioPlayer3', 'progressBar3', 'playButton3', 'pauseButton3')"></ion-icon>
+                <ion-icon name="pause" class="pauseButton" id="pauseButton3"
+                  onclick="reproduzirPodcast('audioPlayer3', 'progressBar3', 'playButton3', 'pauseButton3')"></ion-icon>
+              </div>
+            </figure>
+
+            <audio id="audioPlayer3" controls style="display: none;">
+              <source src="arquivos/audiosPodcast/SPEARFISHER - Reflections on the Water feat DYEBRIGHT.mp3"
+                type="audio/mpeg">
+              Seu navegador não suporta a tag de áudio.
+            </audio>
+
+            <div class="card-content">
+              <div class="card-meta">
+                <time datetime="2022-02-15">March 31, 2022</time>
+
+                <p class="pod-epi">Episode: 02</p>
+              </div>
+
+              <h3 class="h3 card-title">How to go from Start-Up to Scale-Up</h3> <br>
+              <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, delectus dolores.
+                Consequatur provident eaque totam exercitationem nemo nesciunt, soluta quae possimus, obcaecati libero,
+                numquam fuga odio voluptates aliquam rem maxime?</p>
+            </div>
+          </li>
+
+          <li>
+
+            <figure class="card-banner">
+              <img src="arquivos/imagens/tumbs/sorriso.jpg" alt="Ask Unladylike: Late Bloomer with Forever 35">
+              <progress class="progressBar" id="progressBar4" value="0" max="100"></progress>
+
+              <div class="card-banner-icon">
+                <ion-icon name="play" class="playButton" id="playButton4"
+                  onclick="reproduzirPodcast('audioPlayer4', 'progressBar4', 'playButton4', 'pauseButton4')"></ion-icon>
+                <ion-icon name="pause" class="pauseButton" id="pauseButton4"
+                  onclick="reproduzirPodcast('audioPlayer4', 'progressBar4', 'playButton4', 'pauseButton4')"></ion-icon>
+              </div>
+            </figure>
+
+            <audio id="audioPlayer4" controls style="display: none;">
+              <source src="arquivos/audiosPodcast/The Hazelnuts - Something Good - Acapella Version.mp3"
+                type="audio/mpeg">
+              Seu navegador não suporta a tag de áudio.
+            </audio>
+
+
+            <div class="card-content">
+              <div class="card-meta">
+                <time datetime="2022-02-15">March 08, 2022</time>
+
+                <p class="pod-epi">Episode: 01</p>
+              </div>
+
+              <h3 class="h3 card-title">Deadbuttons – Tired of You | Live at Club Heavy</h3> <br>
+              <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, delectus dolores.
+                Consequatur provident eaque totam exercitationem nemo nesciunt, soluta quae possimus, obcaecati libero,
+                numquam fuga odio voluptates aliquam rem maxime?</p>
+            </div>
+
+
+          </li>
+
+        </ul>
+      </section>
+
+
+
+
+
+
+      <!-- 
+    - #FOOTER
+  -->
+
+      <footer>
+
+        <div class="footer-top">
+          <div class="container">
+
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <img src="arquivos/imagens/logo.svg" alt="Micro logo">
+              </a>
+
+              <p class="footer-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt in felis malesuada mollis purus id sit
+                in
+                aliquet
+                lectus eget morbi dui felis malesuada.
+              </p>
+            </div>
+
+            <ul class="footer-list">
+
+              <li>
+                <p class="footer-link-title" id="contatos">Start A Conversation</p>
+              </li>
+
+              <li>
+                <a href="mailto:hello@micro.com" class="footer-link">hello@micro.com</a>
+              </li>
+
+              <li>
+                <a href="tel:+0123454678" class="footer-link">+01234 54678</a>
+              </li>
+
+            </ul>
+
+            <div class="social-list-box">
+
+              <p class="social-title">Follow Us On:</p>
+
+              <ul class="social-list">
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-soundcloud"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-apple"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="copyright">
+              &copy; 2024 <a href="#">danielrsena</a>. All Rights Reserved
+            </p>
+          </div>
+        </div>
+
+      </footer>
+
+
+      <!-- 
+    - #GO TO TOP
+  -->
+
+      <a href="#top" class="go-top" data-go-top>
+        <ion-icon name="chevron-up-outline"></ion-icon>
+      </a>
+
+
+
+
+
+      <!-- 
+    - custom js link
+  -->
+      <script src="arquivos/script.js"></script>
+
+      <!-- 
+    - ionicon link
+  -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
