@@ -1,25 +1,8 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
+/*1.  Constantes de estilização */
 :root {
 
-  /**
-   * colors
-   */
-
+  /* cores */
   --flourescent-blue: hsl(178, 100%, 49%);
   --heliotrope-gray: hsl(253, 15%, 70%);
   --russian-violet: hsl(252, 80%, 16%);
@@ -30,11 +13,7 @@
 
   --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
 
-  /**
-   * typography
-   */
-
-  --ff-josefin: 'Josefin sans', sans-serif;
+  --ff-josefin: 'Josefin sans', sans-serif;   
 
   --fs-1: 25px;
   --fs-2: 18px;
@@ -44,27 +23,13 @@
   --fw-500: 500;
   --fw-700: 700;
 
-  /**
-   * transition
-   */
-
   --transition: 0.25s ease-in-out;
 
-  /**
-   * spacing
-   */
-
-  --section-padding: 30px;
-
+  /* spacing */ --section-padding: 30px;
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+/* 2. RESET (tira configurações padrão do navegador) */
 
 *, *::before, *::after {
   margin: 0;
@@ -120,12 +85,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.6); }
 
 
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+/* 3. Estilos padrão */
 
 .btn {
   color: var(--white);
@@ -162,12 +122,7 @@ body {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+/* 4. HEADER */
 
 header {
   position: fixed;
@@ -244,12 +199,6 @@ header .container {
 
 .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, 0.1); }
 
-.navbar-actions {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .navbar-btn {
   color: var(--white);
   font-size: 25px;
@@ -257,8 +206,8 @@ header .container {
   border-radius: 4px;
 }
 
-.navbar-btn:is(:hover, :focus),
-.navbar-actions .btn:is(:hover, :focus) { background: hsla(0, 0%, 100%, 0.1); }
+.navbar-btn:is(:hover, :focus)/*,
+.navbar-actions .btn:is(:hover, :focus)*/ { background: hsla(0, 0%, 100%, 0.1); }
 
 .overlay {
   position: fixed;
@@ -274,12 +223,7 @@ header .container {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
+/* 5. HERO */
 
 .hero { padding: 140px 0 var(--section-padding); }
 
@@ -332,12 +276,7 @@ header .container {
 .hero-banner { display: none; }
 
 
-
-
-
-/*-----------------------------------*\
-  #PODCAST
-\*-----------------------------------*/
+/* 6. Podcast */
 
 .podcast { padding: var(--section-padding) 0; }
 
@@ -345,8 +284,6 @@ header .container {
   display: grid;
   gap: 30px;
 }
-
-.podcast-card { border-radius: 4px; }
 
 .card-banner {
   position: relative;
@@ -360,10 +297,6 @@ header .container {
   content: "";
   position: absolute;
   inset: 0;
-}
-
-.podcast-card:is(:hover, :focus) .card-banner::before {
-  background: hsla(0, 0%, 100%, 0.1);
 }
 
 .card-banner img { width: 100%; }
@@ -381,11 +314,6 @@ header .container {
   border-radius: 50%;
   font-size: 20px;
   transition: var(--transition);
-}
-
-.podcast-card:is(:hover, :focus) .card-banner-icon {
-  background: var(--white);
-  color: var(--blue-ryb);
 }
 
 .card-meta {
@@ -411,24 +339,10 @@ header .container {
   background: var(--heliotrope-gray);
 }
 
-.podcast-card .card-title {
-  display: inline;
-  padding: 3px 0;
-  background: var(--gradient);
-  background-position: 0 95%;
-  background-repeat: no-repeat;
-  background-size: 0 2px;
-  transition: var(--transition);
-}
-
-.podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; }
+.texto{ text-align: justify; }
 
 
-
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+/* 7. FOOTER */
 
 .footer-top {
   padding: var(--section-padding) 0;
@@ -509,12 +423,7 @@ header .container {
 .copyright a:is(:hover, :focus) { color: var(--blue-ryb); }
 
 
-
-
-
-/*-----------------------------------*\
-  #GO TO TOP
-\*-----------------------------------*/
+/* 8. GO TO TOP */
 
 .go-top {
   position: fixed;
@@ -543,23 +452,11 @@ header .container {
 .go-top:is(:hover, :focus) { --blue-ryb: hsl(221, 100%, 40%); }
 
 
-
-
-
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
-
-/**
- * responsive for larger than 550px
- */
+/* 9. Responsividade */
 
 @media (min-width: 550px) {
 
-  /**
-   * REUSED STYLE
-   */
-
+  /* Estilo padrão*/
   .container {
     max-width: 500px;
     margin-inline: auto;
@@ -567,42 +464,59 @@ header .container {
 
 }
 
-
-
-
-
-/**
- * responsive for larger than 768px
- */
-
 @media (min-width: 768px) {
 
   :root {
-
-    /**
-     * typography
-     */
-
+    
     --fs-1: 30px;
     --fs-2: 20px;
     --fs-4: 18px;
+  }
 
+  /* Estilo padrão */ .container { max-width: 680px; }
+
+  /* HEADER */
+
+  .nav-toggle-btn { display: none; }
+
+  .navbar {
+    position: static;
+    visibility: visible;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+ 
+  .navbar::before,
+  .overlay { display: none; }
+
+
+  /* HERO */
+
+  .hero-content {
+    max-width: 680px;
+    margin-inline: auto;
   }
 
 
+  /* PODCAST */ .podcast-list { grid-template-columns: repeat(3, 1fr); }
 
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 680px; }
-
-
-
-  /**
-   * HERO
-   */
-
+  /* HERO */
+  
   .hero-title { width: 90%; }
 
   .hero :is(.btn-primary, .btn-title, .btn-link) {
@@ -610,53 +524,18 @@ header .container {
     margin-bottom: 0;
   }
 
-  .hero-btn-group {
+  .btn-link-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
   }
 
-  .btn-link-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-  }
+
+  /* PODCAST */ .podcast-list { grid-template-columns: 1fr 1fr; }
 
 
-
-  /**
-   * PODCAST
-   */
-
-  .podcast-list { grid-template-columns: 1fr 1fr; }
-
-
-
-  /**
-   * NEWSLETTER
-   */
-
-  .newsletter-card { padding: 50px; }
-
-  .card-form { position: relative; }
-
-  .newsletter-card .btn-primary {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    bottom: 4px;
-    width: 140px;
-  }
-
-  .newsletter-card .input-field { padding-right: 155px; }
-
-
-
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-top .container {
     display: flex;
@@ -672,30 +551,14 @@ header .container {
   }
 
   .footer-list { margin-bottom: 0; }
-
 }
-
-
-
-
-
-/**
- * responsive for larger than 1024px
- */
 
 @media (min-width: 1024px) {
 
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 980px; }
+  /* Estilo padrão */ .container { max-width: 980px; }
 
 
-
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   header { top: -120px; }
 
@@ -748,72 +611,28 @@ header .container {
 
   .navbar-link:is(:hover, :focus)::after { --scale: 1; }
 
-  .navbar-actions { gap: 10px; }
-
-  .navbar-actions .btn {
-    background: var(--blue-ryb);
-    padding: 15px 25px;
-    transition: background var(--transition);
-  }
-
-  .navbar-actions .btn:is(:hover, :focus) { background: hsl(221, 100%, 40%); }
-
   .navbar::before,
   .overlay { display: none; }
 
 
-
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero-content {
     max-width: 680px;
     margin-inline: auto;
   }
 
-
-
-  /**
-   * PODCAST
-   */
-
-  .podcast-list { grid-template-columns: repeat(3, 1fr); }
+  /* PODCAST */ .podcast-list { grid-template-columns: repeat(3, 1fr); }
 }
-
-
-
-
-
-/**
- * responsive for larger than 1200px
- */
 
 @media (min-width: 1200px) {
 
-  :root {
+  :root { --section-padding: 60px; }
 
-    /**
-     * spacing
-     */
-
-    --section-padding: 60px;
-
-  }
+  /* Estilo padrão */ .container { max-width: 1200px; }
 
 
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 1200px; }
-
-
-
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   header { padding-block: 25px; }
 
@@ -821,13 +640,7 @@ header .container {
 
   .navbar { gap: 20px; }
 
-  .navbar-actions .btn { margin-left: 20px; }
-
-
-
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero {
     display: grid;
@@ -849,11 +662,6 @@ header .container {
 
   .hero-text { margin-bottom: 25px; }
 
-  .hero-btn-group {
-    flex-wrap: wrap-reverse;
-    gap: 35px;
-  }
-
   .hero :is(.btn-primary, .btn-title, .btn-link) { --fs-4: 17px; }
 
   .hero-banner {
@@ -868,10 +676,7 @@ header .container {
   .podcast-list { grid-template-columns: repeat(4, 1fr); }
 
 
-
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-link-title {
     --fs-2: 22px;
@@ -888,11 +693,12 @@ header .container {
     height: 45px;
     font-size: 22px;
   }
-
 }
 
-.pauseButton { display: none;}
 
+/* 10. Reprodução */
+
+.pauseButton { display: none;}
 
 .progressBar {
 
@@ -911,18 +717,9 @@ progress {
   outline: none;
 }
 
-.playButton, .pauseButton{
-  cursor: pointer;
-}
+.playButton, .pauseButton { cursor: pointer; }
 
-progress::-webkit-progress-bar {
-  /* Fundo transparente */
-  background-color: var(--dark-violet);
-}
+progress::-webkit-progress-bar { background-color: var(--dark-violet); }
 
 /* Alterar a cor da barra de progresso no Safari */
-::-webkit-progress-value {
-  background-color: var(--blue-ryb); /* Por exemplo, verde */
-}
-
-.texto{ text-align: justify; }
+::-webkit-progress-value { background-color: var(--blue-ryb); }
