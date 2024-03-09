@@ -668,7 +668,7 @@ header .container {
     display: block;
     width: 100%;
     padding-top: 100%;
-    background: url("/arquivos/imagens/hero-banner.png") no-repeat;
+    background: url("../arquivos/imagens/hero-banner.png") no-repeat;
     background-size: cover;
     border-radius: 100px;
   }
