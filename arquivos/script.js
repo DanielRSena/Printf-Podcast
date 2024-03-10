@@ -14,30 +14,21 @@ for (let i = 0; i < navElemArr.length; i++) {
     elemToggleFunc(navbar);
     elemToggleFunc(overlay);
   });
-
 }
 
 
-
-/**
- * header sticky
- */
-
+//header sticky (fixa o cabeçalho em cima sempre que scrollar para baixo)
 const header = document.querySelector("[data-header]");
-
 let lastScrollPosition = 0;
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () { //sempre que o mouse "scrollar", esse evento acontece
 
-  let scrollPosition = window.pageYOffset;
+  let scrollPosition = window.scrollY; //a variável pega a posição atual do "y da tela"
 
-  if (scrollPosition > lastScrollPosition) {
-    header.classList.remove("active");
-  } else {
-    header.classList.add("active");
-  }
+  if (scrollPosition > lastScrollPosition) header.classList.remove("active");
+  else header.classList.add("active");
 
-  lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
+  lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition; //a posição atual passa a ser a última. Se for <= 0, é setada em 0
 
 });
 
@@ -67,12 +58,7 @@ function reproduzirPodcast(musica, progressBar, play, pause) {
   });
 }
 
-/**
- * go top
- */
-
+//vai para o topo
 window.addEventListener("scroll", function () {
-
   window.scrollY >= 200 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
-
 });

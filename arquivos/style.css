@@ -236,6 +236,7 @@ header .container {
   font-size: var(--fs-4);
   line-height: 1.8;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .hero .btn-primary { margin-bottom: 25px; }
@@ -388,7 +389,7 @@ header .container {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -404,7 +405,7 @@ header .container {
   border-radius: 50%;
 }
 
-.social-link:is(:hover, :focus) { background: var(--blue-ryb); }
+.social-link:hover { background: var(--blue-ryb); }
 
 .copyright {
   color: var(--heliotrope-gray);
@@ -419,7 +420,7 @@ header .container {
   display: inline-block;
 }
 
-.copyright a:is(:hover, :focus) { color: var(--blue-ryb); }
+.copyright a:hover { color: var(--blue-ryb); }
 
 
 /* 8. GO TO TOP */
@@ -659,7 +660,10 @@ header .container {
     margin-bottom: 30px;
   }
 
-  .hero-text { margin-bottom: 25px; }
+  .hero-text { 
+    margin-bottom: 25px; 
+    text-align: justify;
+  }
 
   .hero :is(.btn-primary, .btn-title, .btn-link) { --fs-4: 17px; }
 
@@ -667,7 +671,7 @@ header .container {
     display: block;
     width: 100%;
     padding-top: 100%;
-    background: url("../arquivos/imagens/hero-banner.png") no-repeat;
+    background: url("../arquivos/imagens/heroBanner.jpg") no-repeat;
     background-size: cover;
     border-radius: 100px;
   }

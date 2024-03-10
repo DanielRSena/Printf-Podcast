@@ -1,8 +1,10 @@
-# <i>Site</i> para Podcast
+# Printf Podcast
 
 Esse <i>site</i> foi desenvolvido para hospedar áudios curtos relacionados à tecnologia, em especial as linguagens de programação. 
 
 O intuito principal de sua criação é fazer parte de uma iniciativa que participarei, mas ainda sem maiores detalhes. Exatamente por isso esse software é um beta, e seus conteúdos não são oficiais, muito menos permanentes (por enquanto).
+
+Esse "printf" faz referência ao comando em C para exibir texto na tela, algo bem comum no início dessa jornada.
 
 ## Tecnologias usadas &#128187;
 ![HTML% logo](https://img.shields.io/badge/html5-gray?&style=for-the-badge&logo=html5&logoColor=orange) 
