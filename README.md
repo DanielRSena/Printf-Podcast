@@ -30,4 +30,4 @@ Ambos tornaram o desenvolvimento do <i><i>site</i></i> bem mais fácil, para nã
 
 Gostou da ideia da iniciativa e quer contribuir no código ou sugestão de conteúdos e melhorias?<a href='mailto:danielsena20@hotmail.com?subject=ideias para o SitePodcast'> Me envie um e-mail! </a>
 
-Ficou curioso para acessar o <i>site</i> desse podcast? Vá para lá <a href="https://danielrsena.github.io/SitePodcast">agora</a>!
+Ficou curioso para acessar o <i>site</i> desse podcast? Vá para lá [Agora!](https://danielrsena.github.io/Printf-Podcast/)
